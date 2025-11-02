@@ -16,7 +16,7 @@ services:
     name: n8n-service
     image:
       # Pulls the n8n image tagged as latest from Docker Hub
-      url: docker.io/abfarid/n8n-puppeteer:latest
+      url: docker.io/livinkaleem/n8n-with-pupeteer:latest
 
     # All environment variables defined below are required!
     #
