@@ -22,14 +22,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 
 
 RUN npm install -g puppeteer
-RUN apk add --no-cache chromium
-# Install n8n-nodes-puppeteer in a permanent location
-COPY . /opt/n8n-custom-nodes/node_modules/n8n-nodes-puppeteer
-RUN cd /opt/n8n-custom-nodes/node_modules/n8n-nodes-puppeteer && \
-    npm install && \
-		npm run build && \
-    chown -R node:node /opt/n8n-custom-nodes
-
+RUN apk add --no-cache chromium 
 
 
 USER node
